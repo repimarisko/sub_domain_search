@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scan Results</title>
+  </head>
+  <body>
+    <h1>Scan Results for {{ url }}</h1>
+    <ul>
+      {% for check, result in results.items() %}
+      <li><strong>{{ check }}:</strong> {{ result }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Run another scan</a>
+  </body>
+</html>
